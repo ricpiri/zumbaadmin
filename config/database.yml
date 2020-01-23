@@ -11,13 +11,4 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  database: zumbadmin_production
-  pool: 5
-  timeout: 5000
-
-staging:
-  adapter: postgresql
-  database: zumbadmin_stage
-  pool: 5
-  timeout: 5000
+  url: <%= ENV['DATABASE_URL'] %>
